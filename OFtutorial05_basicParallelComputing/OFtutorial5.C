@@ -21,6 +21,8 @@ License
     You should have received a copy of the GNU General Public License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
+tttt: Use this code to construct a parallel computing test
+
 \*---------------------------------------------------------------------------*/
 
 #include "fvCFD.H"
@@ -40,7 +42,7 @@ int main(int argc, char *argv[])
     // gets used by the head process (processor0)
     Pout << "Hello from processor " << Pstream::myProcNo() << "! I am working on "
          << mesh.C().size() << " cells" << endl;
-
+    //根据上面这段代码，对一个变量在各个processor里面进行监测，看看变量是否在各个processor的值是否不一样
     // To exchange information between processes, special OpenMPI routines need
     // to be called.
 
